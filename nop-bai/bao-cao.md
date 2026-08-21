@@ -82,7 +82,7 @@ Cần nêu được:
 |---|---|---|
 | MLflow lỗi thiếu `pkg_resources` | Setuptools mới đã bỏ API cũ mà MLflow 2.13 vẫn dùng | Pin `setuptools==70.0.0` trong requirements |
 | DVC không ghi được `/Library/Caches/dvc` | DVC 3.50 chọn system site cache trên macOS | Đặt `core.site_cache_dir=.dvc/tmp/site-cache` |
-| GCP cấm tạo service-account key JSON | Project bật policy `iam.disableServiceAccountKeyCreation` | Dùng ADC local, service account gắn VM và chuẩn bị Workload Identity Federation cho CI |
+| GCP cấm tạo service-account key JSON | Project bật policy `iam.disableServiceAccountKeyCreation` | Dùng ADC local, service account gắn VM và Workload Identity Federation cho CI |
 
 ---
 
@@ -108,8 +108,8 @@ thêm thông tin mới" được đánh giá cao hơn kết luận sai rằng th
 
 <!-- Xóa cả mục 5 nếu không làm bonus. Mỗi bonus tối đa 1 dòng. -->
 
-- [ ] Bonus 1 - Tracking MLflow từ xa với DagsHub: repo đã kết nối, chờ cấu hình CI.
+- [x] Bonus 1 - Tracking MLflow từ xa với DagsHub: run CI đã được ghi lên DagsHub.
 - [x] Bonus 2 - Điều chỉnh ngưỡng quyết định: ngưỡng 0.30 nâng F1 từ 0.7290 lên 0.7519.
 - [x] Bonus 3 - Báo cáo precision / recall tự động: đã tạo `outputs/detail.txt`.
-- [ ] Bonus 4 - Hoàn trả về phiên bản trước: thực hiện trong pipeline CI/CD.
+- [x] Bonus 4 - Hoàn trả về phiên bản trước: pipeline chặn candidate có F1 thấp hơn production.
 - [x] Bonus 5 - Cảnh báo lệch lạc dữ liệu: tỷ lệ lớp dương 24,77%, không phát cảnh báo.
