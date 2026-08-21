@@ -147,6 +147,8 @@ def train(
         )
 
     _configure_mlflow()
+    git_sha = os.getenv("GITHUB_SHA", "local")
+    execution_context = "github-actions" if os.getenv("GITHUB_ACTIONS") else "local"
     run_name = (
         f"gb-n{params['n_estimators']}-lr{params['learning_rate']}"
         f"-d{params['max_depth']}"
@@ -154,6 +156,12 @@ def train(
 
     with mlflow.start_run(run_name=run_name):
         mlflow.log_params(params)
+        mlflow.set_tags(
+            {
+                "git_sha": git_sha,
+                "execution_context": execution_context,
+            }
+        )
 
         model = GradientBoostingClassifier(**params, random_state=42)
         model.fit(X_train, y_train)
@@ -187,6 +195,8 @@ def train(
         os.makedirs("models", exist_ok=True)
 
         report = {
+            "git_sha": git_sha,
+            "execution_context": execution_context,
             "f1_score": f1,
             "accuracy": acc,
             "default_threshold": 0.5,
