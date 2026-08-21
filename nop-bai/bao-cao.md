@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| Họ và tên | Đặng Hữu Khánh |
-| MSSV | 01104 |
+| Họ và tên | Đặng Hữu Khanh |
+| MSSV | 2A202601104 |
 | Lớp / Khóa | K4 |
 | Repo GitHub | https://github.com/HuuKhanh19/K4-Track2-Day21-DangHuuKhanh-01104 |
 | Ngày nộp | 21/08/2026 |
