@@ -80,9 +80,9 @@ Cần nêu được:
 
 | Khó khăn | Nguyên nhân | Cách giải quyết |
 |---|---|---|
-| ___ | ___ | ___ |
-| ___ | ___ | ___ |
-| ___ | ___ | ___ |
+| MLflow lỗi thiếu `pkg_resources` | Setuptools mới đã bỏ API cũ mà MLflow 2.13 vẫn dùng | Pin `setuptools==70.0.0` trong requirements |
+| DVC không ghi được `/Library/Caches/dvc` | DVC 3.50 chọn system site cache trên macOS | Đặt `core.site_cache_dir=.dvc/tmp/site-cache` |
+| GCP cấm tạo service-account key JSON | Project bật policy `iam.disableServiceAccountKeyCreation` | Dùng ADC local, service account gắn VM và chuẩn bị Workload Identity Federation cho CI |
 
 ---
 
