@@ -2,4 +2,4 @@
     remote = labstore
     site_cache_dir = .dvc/tmp/site-cache
 ['remote "labstore"']
-    url = gs://income-lab-track2-day16-01104/dvc
+    url = gs://income-lab-track2-day21-01104/dvc

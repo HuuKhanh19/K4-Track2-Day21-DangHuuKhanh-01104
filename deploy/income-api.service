@@ -7,7 +7,7 @@ After=network-online.target
 Type=simple
 User=hkhanhp19_gmail_com
 WorkingDirectory=/home/hkhanhp19_gmail_com
-Environment="ARTIFACT_BUCKET=income-lab-track2-day16-01104"
+Environment="ARTIFACT_BUCKET=income-lab-track2-day21-01104"
 Environment="PYTHONUNBUFFERED=1"
 ExecStart=/home/hkhanhp19_gmail_com/income-venv/bin/python /home/hkhanhp19_gmail_com/src/serve.py
 Restart=always

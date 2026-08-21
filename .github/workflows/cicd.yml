@@ -22,7 +22,7 @@ permissions:
 
 env:
   PYTHON_VERSION: "3.10"
-  GCP_PROJECT_ID: track2-day16-01104
+  GCP_PROJECT_ID: track2-day21-01104
 
 jobs:
   # ---------------------------------------------------------------------------
